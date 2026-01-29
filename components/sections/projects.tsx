@@ -1,129 +1,79 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Code2 } from "lucide-react";
 import Link from "next/link";
 import { Content } from "@/lib/content";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 interface ProjectsProps {
   content: Content["projects"];
 }
 
-const getProjects = (content: Content["projects"]) => [
-  {
-    title: content.items[0].title,
-    description: content.items[0].description,
-    tags: ["PHP", "MySQL", "jQuery", "Bootstrap"],
-    image: "/img/overlord.png",
-    link: null, 
-  },
-  {
-    title: content.items[1].title,
-    description: content.items[1].description,
-    tags: ["HTML5", "JavaScript", "Bootstrap 4"],
-    image: "/img/mmcigarco.png",
-    link: "https://mmcigarco.com.br",
-  },
-  {
-    title: content.items[2].title,
-    description: content.items[2].description,
-    tags: ["PHP", "MySQL", "jQuery", "PagSeguro API"],
-    image: "/img/pitanshop.png",
-    link: "https://pitanshop.com.br",
-  },
-  {
-    title: content.items[3].title,
-    description: content.items[3].description,
-    tags: ["PHP", "jQuery", "AJAX", "PWA", "MySQL"],
-    image: "/img/maisbela.png",
-    link: null,
-  },
-  {
-    title: content.items[4].title,
-    description: content.items[4].description,
-    tags: ["PHP", "MySQL", "jQuery", "AJAX"],
-    image: "/img/hentz.png",
-    link: null,
-  }
-];
-
 export function Projects({ content }: ProjectsProps) {
-  const projects = getProjects(content);
-
   return (
-    <section id="projects" className="py-24 bg-background">
+    <section id="projects" className="py-32 bg-background relative border-b border-border/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold mb-4"
-          >
-            {content.title}
-          </motion.h2>
+        <div className="mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="w-20 h-1.5 bg-primary mx-auto rounded-full"
-          ></motion.div>
+            className="flex flex-col md:flex-row md:items-end justify-between gap-4"
+          >
+            <div>
+              <h2 className="text-4xl font-bold tracking-tight mb-4">{content.title}</h2>
+              <p className="text-muted-foreground max-w-xl text-lg">
+                {content.subtitle}
+              </p>
+            </div>
+            <Button variant="outline" className="hidden md:flex">
+              {content.viewGithub} <ExternalLink className="ml-2 h-4 w-4" />
+            </Button>
+          </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {content.items.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group bg-background rounded-xl overflow-hidden border border-border/50 hover:shadow-lg transition-all hover:-translate-y-1 flex flex-col h-full"
             >
-              <div className="relative h-48 w-full overflow-hidden bg-muted">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-                  {project.link && (
-                    <Link 
-                      href={project.link} 
-                      target="_blank" 
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <ExternalLink size={20} />
-                    </Link>
-                  )}
-                </div>
-                
-                <p className="text-muted-foreground mb-6 flex-grow">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.tags.map((tag) => (
-                    <span 
-                      key={tag} 
-                      className="text-xs font-medium px-2.5 py-1 bg-primary/10 text-primary rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              <Card className="h-full flex flex-col hover:border-primary/50 transition-colors group">
+                <CardHeader>
+                  <div className="flex justify-between items-start mb-2">
+                    <div className="p-2 bg-primary/10 rounded-lg text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      <Code2 size={20} />
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl">{project.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <CardDescription className="text-base mb-6 leading-relaxed">
+                    {project.description}
+                  </CardDescription>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech?.map((tag) => (
+                      <Badge key={tag} variant="secondary" className="font-mono text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
             </motion.div>
           ))}
+        </div>
+        
+        <div className="mt-12 text-center md:hidden">
+            <Button variant="outline" className="w-full">
+              {content.viewGithub} <ExternalLink className="ml-2 h-4 w-4" />
+            </Button>
         </div>
       </div>
     </section>

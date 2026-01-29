@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Database, Layout, Server, Wrench } from "lucide-react";
 import { Content } from "@/lib/content";
+import { Badge } from "@/components/ui/badge";
 
 interface AboutProps {
   content: Content["about"];
@@ -12,22 +13,22 @@ const getSkills = (content: Content["about"]) => [
   {
     category: content.skills.backend,
     icon: <Server className="w-6 h-6 text-primary" />,
-    items: ["PHP", "Laravel", "Symfony", "Node.js", "Python", "REST APIs", "Bancos SQL"]
+    items: ["Node.js", "Python", "Go", "Laravel", "PostgreSQL", "Redis", "GraphQL"]
   },
   {
     category: content.skills.frontend,
     icon: <Layout className="w-6 h-6 text-primary" />,
-    items: ["React", "Next.js", "Vue.js", "Angular", "TypeScript", "Tailwind CSS", "Mobile First"]
+    items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Shadcn/UI"]
   },
   {
     category: content.skills.devops,
     icon: <Wrench className="w-6 h-6 text-primary" />,
-    items: ["Docker", "Kubernetes", "AWS", "Google Cloud", "CI/CD (GitHub Actions)", "NGINX/Apache"]
+    items: ["AWS (EC2, S3, RDS)", "Docker", "Kubernetes", "CI/CD", "Terraform", "Vercel"]
   },
   {
     category: content.skills.data,
     icon: <Database className="w-6 h-6 text-primary" />,
-    items: ["MySQL", "PostgreSQL", "Redis", "Elasticsearch", "Pest/PHPUnit", "Jest/Cypress", "Clean Arch"]
+    items: ["Clean Architecture", "DDD", "Hexagonal Arch", "System Design", "TDD", "Microservices"]
   },
 ];
 
@@ -35,7 +36,7 @@ export function About({ content }: AboutProps) {
   const skills = getSkills(content);
   
   return (
-    <section id="about" className="py-24 bg-muted/30">
+    <section id="about" className="py-24 bg-muted/20 border-b border-border/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
@@ -55,7 +56,7 @@ export function About({ content }: AboutProps) {
           ></motion.div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -77,7 +78,7 @@ export function About({ content }: AboutProps) {
                <motion.div 
                  key={index}
                  whileHover={{ y: -5 }}
-                 className="bg-background p-6 rounded-xl shadow-sm border border-border/50 hover:shadow-md transition-all"
+                 className="bg-background p-6 rounded-xl shadow-sm border border-border/50 hover:border-primary/30 transition-all hover:bg-accent/5"
                >
                  <div className="flex items-center gap-3 mb-4">
                    <div className="p-2 bg-primary/10 rounded-lg">
@@ -87,9 +88,9 @@ export function About({ content }: AboutProps) {
                  </div>
                  <div className="flex flex-wrap gap-2">
                    {skill.items.map((item) => (
-                     <span key={item} className="text-xs font-medium px-2.5 py-1 bg-muted rounded-full text-muted-foreground">
+                     <Badge key={item} variant="secondary" className="font-normal">
                        {item}
-                     </span>
+                     </Badge>
                    ))}
                  </div>
                </motion.div>

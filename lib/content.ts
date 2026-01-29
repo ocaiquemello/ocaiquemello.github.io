@@ -2,121 +2,166 @@ export const content = {
   pt: {
     nav: {
       about: "Sobre",
-      partnerships: "Parcerias", // Should check if this link was removed or kept. Based on last steps, Partnerships section was removed. But I should double check navbar.tsx. It seems I removed it from navItems in step 207. So I will exclude it.
       projects: "Projetos",
       contact: "Contato",
     },
     hero: {
-      greeting: "Olá, eu sou",
-      role: "Full-Stack Web Developer",
-      description: "Transformando ideias em experiências digitais excepcionais. Especializado em criar soluções modernas, performáticas e escaláveis para a web.",
-      cta: "Entre em contato",
+      greeting: "Caique Mello",
+      role: "Senior Product Engineer",
+      badge: "Senior Product Engineer",
+      description: "Engenheiro de software focado em produto. Construo sistemas escaláveis e experiências de alto nível para a web.",
+      cta: "Ver Projetos",
     },
     about: {
-      title: "Sobre Mim",
-      p1: "Sou um desenvolvedor Full-Stack apaixonado por tecnologia e resolução de problemas. Com experiência em diversas linguagens e frameworks, meu objetivo é criar soluções que não apenas funcionem, mas que proporcionem uma excelente experiência ao usuário.",
-      p2: "Minha jornada no desenvolvimento web começou com a curiosidade de entender como as coisas funcionam na internet. Desde então, tenho me dedicado a aprimorar minhas habilidades, sempre buscando as melhores práticas e tecnologias modernas para entregar projetos de alta qualidade.",
-      p3: "Estou sempre em busca de novos desafios e oportunidades para aprender e crescer profissionalmente.",
+      title: "Mindset de Fundador",
+      p1: "Não escrevo apenas código; construo produtos. Minha abordagem combina engenharia pragmática com visão de negócio.",
+      p2: "Especialista em transformar requisitos complexos em sistemas simples, escaláveis e manuteníveis. Foco em arquitetura limpa (Clean/Hexagonal), performance e experiência do desenvolvedor.",
+      p3: "Crio soluções SaaS independentes como hobby, o que me dá uma perspectiva única sobre o ciclo completo de desenvolvimento de software.",
       skills: {
-        backend: "Backend",
-        frontend: "Frontend",
-        devops: "DevOps & Cloud",
-        data: "Data & Quality",
+        backend: "Backend & Systems",
+        frontend: "Frontend & UI/UX",
+        devops: "DevOps & Infra",
+        data: "Data & Architecture",
       },
     },
-    projects: {
-      title: "Meus Projetos",
+    systemDesign: {
+      title: "Arquitetura & Sistemas",
+      description: "Expertise em desenhar soluções robustas para problemas complexos.",
       items: [
         {
-          title: "Overlord",
-          description: "Um sistema PDV (ponto de venda) completo e responsivo. Controla finanças, estoque e emite NF-e. Desenvolvido para facilitar a gestão comercial.",
+          title: "Sistemas Distribuídos",
+          description: "Desenho de APIs RESTful e GraphQL escaláveis, otimização de banco de dados e microserviços."
         },
         {
-          title: "M&M Cigar Co.",
-          description: "Site estático estilo portfólio para divulgação de marca e serviços. Design elegante focando na identidade visual da empresa.",
+          title: "Clean Architecture",
+          description: "Implementação de padrões como DDD e Hexagonal Architecture para garantir manutenibilidade."
         },
         {
-          title: "Pitanshop",
-          description: "Marketplace local onde clientes podem visualizar promoções e lojas da cidade, com integração de pagamento via API PagSeguro.",
+          title: "DevOps & Cloud",
+          description: "CI/CD pipelines, Docker, AWS (EC2, S3, RDS) e Vercel para deploys automatizados e seguros."
+        }
+      ]
+    },
+    indieSaas: {
+      title: "Indie SaaS & Experimentos",
+      description: "Projetos pessoais onde atuo como Engenheiro, Designer e Fundador.",
+      shipping: "Lançando mensalmente",
+      comingSoonTitle: "Projetos em Órbita",
+      comingSoonDescription: "Estou reformulando esta seção para apresentar novos produtos e ferramentas. Fique ligado.",
+    },
+    projects: {
+      title: "Aplicações",
+      subtitle: "Aplicações de alto impacto construídas com arquitetura moderna.",
+      viewGithub: "Ver no Github",
+      items: [
+        {
+          title: "Overlord ERP",
+          description: "Sistema de gestão complexo com controle financeiro, estoque e emissão de NFe. Arquitetura modular focada em performance.",
+          tech: ["Laravel", "Vue.js", "MySQL", "Docker"]
         },
         {
-          title: "Mais Bela ERP",
-          description: "Sistema de gerenciamento para distribuidora de maquiagens. Controle completo de estoque, NFe, e boletos bancários (CNAB240/400). Inclui App PWA para vendas externas.",
+          title: "Mais Bela Ecosystem",
+          description: "Ecossistema completo de ERP + PWA e e-commerce B2B. Integração bancária direta (CNAB) e sincronização em tempo real.",
+          tech: ["React", "Node.js", "AWS", "PWA"]
         },
         {
-          title: "Hentz",
-          description: "Sistema para auxiliar na venda e controle de lotes imobiliários. Integração de PDV para criação de contratos e emissão de boletos bancários.",
+          title: "Hentz Real Estate",
+          description: "CRM imobiliário com geração automática de contratos e gestão financeira de loteamentos. Otimizou em 80% o fluxo de vendas.",
+          tech: ["PHP", "Boostrap", "Mariadb"]
         },
       ],
     },
     contact: {
-      title: "Vamos trabalhar juntos?",
-      description: "Estou sempre aberto a novas oportunidades e desafios. Se você tem um projeto em mente ou quer apenas bater um papo, entre em contato!",
-      ctaEmail: "Enviar E-mail",
+      title: "Vamos construir algo juntos?",
+      description: "Estou disponível para projetos desafiadores que exijam alta senioridade técnica e visão de produto.",
+      ctaEmail: "ocaiquemello@gmail.com",
     },
     footer: {
-      rights: "Todos os direitos reservados.",
+      rights: "Design & Code by Caique Mello. Built with Next.js, Tailwind & Vercel Style.",
     },
   },
   en: {
     nav: {
       about: "About",
-      partnerships: "Partnerships", // Keeping it out if removed, but good to have structure if restored.
-      projects: "Projects",
+      projects: "Experience",
       contact: "Contact",
     },
     hero: {
-      greeting: "Hello, I am",
-      role: "Full-Stack Web Developer",
-      description: "Transforming ideas into exceptional digital experiences. Specialized in creating modern, performant, and scalable web solutions.",
-      cta: "Get in touch",
+      greeting: "Caique Mello",
+      role: "Senior Product Engineer",
+      badge: "Senior Product Engineer",
+      description: "Product-minded engineer building high-quality web applications. I turn complex problems into simple, scalable, and beautiful software.",
+      cta: "View Experience",
     },
     about: {
-      title: "About Me",
-      p1: "I am a Full-Stack developer passionate about technology and problem-solving. With experience in various languages and frameworks, my goal is to create solutions that not only work but also provide an excellent user experience.",
-      p2: "My journey in web development began with a curiosity to understand how things work on the internet. Since then, I have dedicated myself to honing my skills, always seeking best practices and modern technologies to deliver high-quality projects.",
-      p3: "I am always looking for new challenges and opportunities to learn and grow professionally.",
+      title: "The Founder Mindset",
+      p1: "I don't just write code; I ship products. My approach blends pragmatic engineering with a strong product vision.",
+      p2: "Specialized in transforming undefined requirements into scalable systems. I prioritize clean architecture (Hexagonal/DDD), developer experience, and long-term maintainability.",
+      p3: "I build indie SaaS projects in my spare time, giving me deep empathy for the full software lifecycle—from first commit to first customer.",
       skills: {
-        backend: "Backend",
-        frontend: "Frontend",
-        devops: "DevOps & Cloud",
-        data: "Data & Quality",
+        backend: "Backend & Systems",
+        frontend: "Frontend & UI/UX",
+        devops: "DevOps & Infra",
+        data: "Data & Architecture",
       },
     },
-    projects: {
-      title: "My Projects",
+    systemDesign: {
+      title: "System Design & Architecture",
+      description: "Designing robust solutions for complex engineering challenges.",
       items: [
         {
-          title: "Overlord",
-          description: "A complete and responsive POS (Point of Sale) system. Controls finances, inventory, and issues electronic invoices. Developed to facilitate business management.",
+          title: "Distributed Systems",
+          description: "Designing scalable RESTful/GraphQL APIs, database optimization, and resilient microservices patterns."
         },
         {
-          title: "M&M Cigar Co.",
-          description: "Static portfolio-style website for brand and service promotion. Elegant design focusing on the company's visual identity.",
+          title: "Clean Architecture",
+          description: "Applying Domain-Driven Design (DDD) and Hexagonal Architecture to ensure code longevity."
         },
         {
-          title: "Pitanshop",
-          description: "Local marketplace where customers can view promotions and city stores, with payment integration via PagSeguro API.",
+          title: "DevOps & Cloud",
+          description: "Tech lead standard CI/CD pipelines, Docker containerization, and AWS infrastructure management."
+        }
+      ]
+    },
+    indieSaas: {
+      title: "Indie SaaS & Ventures",
+      description: "Side projects where I wear every hat: Engineer, Designer, and Founder.",
+      shipping: "Shipping monthly",
+      comingSoonTitle: "Projects in Orbit",
+      comingSoonDescription: "I am currently reformulating this section to showcase new tools and products. Stay tuned.",
+    },
+    projects: {
+      title: "Selected Experience",
+      subtitle: "High-impact applications built with modern architecture.",
+      viewGithub: "View Github",
+      items: [
+        {
+          title: "Overlord ERP",
+          description: "High-throughput POS and management system handling financial data, inventory, and tax compliance (NFe). Built for reliability.",
+          tech: ["Laravel", "Vue.js", "MySQL", "Docker"]
         },
         {
-          title: "Mais Bela ERP",
-          description: "Management system for a makeup distributor. Complete control of inventory, invoices, and bank slips (CNAB240/400). Includes PWA App for external sales.",
+          title: "Mais Bela Ecosystem",
+          description: "End-to-end B2B ecosystem featuring an ERP, mobile PWA, and e-commerce. Handled real-time stock sync and direct bank integrations (CNAB).",
+          tech: ["React", "Node.js", "AWS", "PWA"]
         },
         {
-          title: "Hentz",
-          description: "System to assist in the sale and control of real estate lots. POS integration for contract creation and bank slip issuance.",
+          title: "Hentz Real Estate",
+          description: "Real estate CRM automating contract generation and financial tracking for large allotments. Reduced sales processing time by 80%.",
+          tech: ["PHP", "Legacy Migration", "Mariadb"]
         },
       ],
     },
     contact: {
-      title: "Let's work together?",
-      description: "I am always open to new opportunities and challenges. If you have a project in mind or just want to chat, get in touch!",
-      ctaEmail: "Send E-mail",
+      title: "Available for new challenges",
+      description: "I am looking for roles where I can leverage my product engineering expertise to have significant business impact.",
+      ctaEmail: "caiquemello.dev@gmail.com",
     },
     footer: {
-      rights: "All rights reserved.",
+      rights: "Design & Code by Caique Mello. Built with Next.js, Tailwind & Vercel Style.",
     },
   },
 };
 
 export type Content = typeof content.pt;
+

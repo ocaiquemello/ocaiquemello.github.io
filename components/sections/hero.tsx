@@ -1,10 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { Content } from "@/lib/content";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Github, Linkedin, Terminal } from "lucide-react";
 
 interface HeroProps {
   content: Content["hero"];
@@ -12,61 +11,50 @@ interface HeroProps {
 
 export function Hero({ content }: HeroProps) {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden bg-gradient-to-br from-background via-muted/20 to-primary/5">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-24">
-          
-          <div className="flex-1 text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-xl md:text-2xl font-medium text-primary mb-4">
-                {content.greeting}
-              </h2>
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-                Caique Mello
-              </h1>
-              <h3 className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-6">
-                {content.role}
-              </h3>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                {content.description}
-              </p>
-              
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                <Link 
-                  href="#contact"
-                  className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors flex items-center gap-2"
-                >
-                  {content.cta} <ArrowRight size={18} />
-                </Link>
-              </div>
-            </motion.div>
+    <section className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden bg-background">
+      {/* Background Gradient */}
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background to-background pointer-events-none" />
+
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 z-10 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="space-y-6"
+        >
+          {/* Badge / Terminal feel */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-muted/50 text-xs font-mono text-muted-foreground mb-4 glass">
+            <Terminal size={12} />
+            <span>{content.badge}</span>
           </div>
 
-          <motion.div 
-            className="flex-1 relative"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
-              <Image
-                src="/img/imgProfile.jpg"
-                alt="Caique Mello"
-                fill
-                className="object-cover rounded-full border-4 border-background shadow-2xl relative z-10"
-                priority
-              />
-            </div>
-          </motion.div>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground">
+            {content.greeting}
+          </h1>
+          
+          <p className="text-2xl md:text-3xl text-muted-foreground font-light max-w-2xl mx-auto">
+             <span className="text-foreground font-medium">{content.role}</span>
+          </p>
 
-        </div>
+          <p className="text-lg text-muted-foreground/80 max-w-xl mx-auto leading-relaxed">
+            {content.description}
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <Button size="lg" className="rounded-full text-base" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
+              {content.cta} <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+            
+            <div className="flex items-center gap-2">
+              <Button variant="ghost" size="icon" className="rounded-full" onClick={() => window.open('https://github.com/ocaiquemello', '_blank')}>
+                <Github className="h-5 w-5" />
+              </Button>
+              <Button variant="ghost" size="icon" className="rounded-full" onClick={() => window.open('https://linkedin.com/in/ocaiquemello', '_blank')}>
+                <Linkedin className="h-5 w-5" />
+              </Button>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

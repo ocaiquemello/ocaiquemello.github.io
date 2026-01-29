@@ -28,7 +28,7 @@ export function Contact({ content }: ContactProps) {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link
-              href="mailto:ocaiquemello@gmail.com"
+              href={`mailto:${content.ctaEmail}`}
               className="flex items-center gap-3 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all text-lg shadow-lg shadow-primary/20"
             >
               <Mail size={20} />
@@ -37,7 +37,7 @@ export function Contact({ content }: ContactProps) {
             
             <div className="flex gap-4">
               <Link 
-                href="https://linkedin.com/in/ocaiquemello" 
+                href="https://linkedin.com/in/caiquemello" 
                 target="_blank"
                 className="p-4 rounded-full bg-muted hover:bg-muted/80 text-foreground transition-colors border border-border"
               >
@@ -57,7 +57,7 @@ export function Contact({ content }: ContactProps) {
 
           <div className="mt-12 pt-8 border-t border-border/50">
              <p className="text-muted-foreground font-mono">
-               ocaiquemello@gmail.com
+               {content.ctaEmail}
              </p>
           </div>
         </motion.div>
