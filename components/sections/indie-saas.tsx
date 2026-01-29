@@ -9,7 +9,7 @@ interface IndieSaasProps {
 export function IndieSaas({ content }: IndieSaasProps) {
   return (
     <section id="indie-saas" className="py-24 bg-muted/20 border-b border-border/40">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
          <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4">
              <div>
                 <h2 className="text-3xl font-bold tracking-tight mb-4">{content.title}</h2>

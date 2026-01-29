@@ -16,11 +16,14 @@ export function Navbar({ content }: NavbarProps) {
   const pathname = usePathname();
   const isEnglish = pathname?.startsWith("/en");
 
+  const homePath = isEnglish ? "/en" : "/";
+  const isHomePage = pathname === homePath || pathname === `${homePath}/`;
+
   const navItems = [
-    { name: content.about, href: "#about" },
-    { name: content.builds, href: "/builds" },
-    { name: content.projects, href: "#projects" },
-    { name: content.contact, href: "#contact" },
+    { name: content.about, href: isHomePage ? "#about" : `${homePath}#about` },
+    { name: content.builds, href: isEnglish ? "/en/builds" : "/builds" },
+    { name: content.projects, href: isHomePage ? "#projects" : `${homePath}#projects` },
+    { name: content.contact, href: isHomePage ? "#contact" : `${homePath}#contact` },
   ];
 
   return (

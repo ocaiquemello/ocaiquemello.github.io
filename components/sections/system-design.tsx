@@ -7,11 +7,12 @@ interface SystemDesignProps {
 }
 
 export function SystemDesign({ content }: SystemDesignProps) {
-  const icons = [Server, Layers, Database, Cloud, Wrench, Zap];
+  // Order: Backends, SaaS, High Perf, DevOps, Automation, Event-Driven
+  const icons = [Server, Layers, Zap, Cloud, Wrench, Database];
 
   return (
     <section id="system-design" className="py-24 bg-background border-b border-border/40">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <h2 className="text-3xl font-bold tracking-tight mb-4">{content.title}</h2>
           <p className="text-muted-foreground max-w-2xl text-lg">{content.description}</p>

@@ -10,17 +10,17 @@ export const content = {
       greeting: "Caique Mello",
       role: "Senior Software Engineer construindo sistemas escaláveis e produtos independentes",
       badge: "Senior Software Engineer",
-      description: "Projeto e construo sistemas web de alta performance, backends escaláveis e ferramentas para desenvolvedores utilizando Laravel, React, TypeScript e infraestrutura em nuvem.",
-      extra: "Atualmente explorando produtos SaaS independentes e sistemas de automação enquanto trabalho em plataformas corporativas.",
+      description: "Desenho e construo sistemas web de alta performance, arquiteturas de backend e ferramentas para desenvolvedores.",
+      extra: "Atualmente exploro produtos SaaS independentes e sistemas de automação.",
       cta: "Ver Projetos",
       github: "GitHub",
       linkedin: "LinkedIn",
     },
     about: {
       title: "Mindset de Engenheiro-Criador",
-      p1: "Sou um Engenheiro de Software Sênior focado na construção de sistemas escaláveis e produtos de longo prazo.",
-      p2: "Gosto de projetar arquitetura de software, melhorar a performance de sistemas e experimentar ideias de SaaS independentes.",
-      p3: "Meu objetivo é combinar a excelência da engenharia corporativa com a criação de produtos independentes, mantendo um ritmo calmo e sustentável enquanto construo software significativo.",
+      p1: "Sou Engenheiro de Software Sênior com mais de 9 anos construindo sistemas web escaláveis, seguros e de alta performance.",
+      p2: "Trabalho com Laravel, Symfony, React, Next.js, TypeScript, MySQL e Docker, com foco em arquitetura de sistemas, performance e produtividade de engenharia.",
+      p3: "Atualmente exploro produtos SaaS independentes e sistemas de automação, equilibrando engenharia corporativa com criação de produtos próprios.",
       skills: {
         backend: "Backend & Systems",
         frontend: "Frontend & UI/UX",
@@ -67,18 +67,18 @@ export const content = {
       ctaBuilds: "Ver Log de Builds",
       items: [
         {
-          title: "Mu Online Character Mgmt",
-          description: "Plataforma escalável para gestão de personagens em MMORPG. Design com Hexagonal Architecture para isolamento de domínio. APIs RESTful e entidades baseadas em DDD.",
+          title: "Sistema de Gerenciamento de Personagens (MMORPG)",
+          description: "Plataforma escalável para gerenciamento de personagens em um ecossistema MMORPG, projetada com Arquitetura Hexagonal para isolamento de domínio e extensibilidade futura. Implementei APIs REST e entidades orientadas a domínio para permitir integração com servidores de jogo e ferramentas administrativas. Foco em manutenibilidade, testabilidade e escalabilidade de longo prazo.",
           tech: ["Laravel", "React", "MySQL", "Hexagonal Arch"]
         },
         {
-          title: "Campaign Admin Platform",
-          description: "Sistema de administração de campanhas com validação complexa de regras de negócio e configuração dinâmica de recompensas. Componentes de UI modulares.",
+          title: "Plataforma de Administração de Campanhas",
+          description: "Sistema administrativo para configuração de campanhas com regras de negócio complexas e validação avançada de dados. Implementei validações de unicidade entre múltiplos parâmetros e componentes de UI modulares para workflows corporativos escaláveis.",
           tech: ["Next.js", "React", "Laravel", "MySQL"]
         },
         {
-          title: "Business Hours System",
-          description: "Interface de agendamento corporativo permitindo operações CRUD para horários agrupados por dia da semana. Contratos de API e padrões de UI multi-tenant.",
+          title: "Sistema de Gestão de Horários Comerciais",
+          description: "Interface corporativa para CRUD de horários de funcionamento agrupados por dia da semana. Projetei contratos de API e padrões de UI visando escalabilidade multi-tenant.",
           tech: ["Next.js", "React", "REST API"]
         },
       ]
@@ -87,16 +87,16 @@ export const content = {
       title: "Construções Independentes & Experimentos",
       items: [
         {
-          title: "SaaS de Gestão para Terapeutas (WIP)",
-          description: "Explorando uma plataforma leve de gerenciamento para terapeutas, focando em agendamento, anotações e privacidade."
+          title: "SaaS para Gestão de Clínicas e Terapeutas (WIP)",
+          description: "Explorando uma plataforma leve para gestão de agenda, prontuários e fluxos administrativos, com foco em privacidade e simplicidade."
         },
         {
           title: "Agentes de Automação com IA",
-          description: "Construindo agentes autônomos para 'game farming', automação administrativa e fluxos de produtividade."
+          description: "Construção de agentes autônomos para automação de tarefas administrativas, produtividade e workflows técnicos."
         },
         {
-          title: "Experimentos de Arquitetura & Tooling",
-          description: "Experimentos pessoais em design de sistemas, ferramentas de infraestrutura e produtividade do desenvolvedor."
+          title: "Experimentos em Arquitetura e Ferramentas de Desenvolvedor",
+          description: "Projetos pessoais focados em design de sistemas, infraestrutura e produtividade de engenharia."
         }
       ]
     },
@@ -129,6 +129,7 @@ export const content = {
     },
     footer: {
       rights: "Design & Code by Caique Mello. Built with Next.js, Tailwind & Vercel Style.",
+      slogan: "Construir sistemas. Construir produtos. Permanecer soberano.",
     },
   },
   en: {
@@ -150,9 +151,9 @@ export const content = {
     },
     about: {
       title: "Engineer-Creator Mindset",
-      p1: "I am a Senior Software Engineer focused on building scalable systems and long-term products.",
-      p2: "I enjoy designing software architecture, improving system performance, and experimenting with independent SaaS ideas.",
-      p3: "My goal is to combine enterprise engineering excellence with independent product creation, maintaining a calm and sustainable pace while building meaningful software.",
+      p1: "I am a Senior Software Engineer with over 9 years of experience building scalable, secure, and high-performance web systems.",
+      p2: "I work with Laravel, Symfony, React, Next.js, TypeScript, MySQL, and Docker, focusing on system architecture, performance, and engineering productivity.",
+      p3: "Currently exploring independent SaaS products and automation systems, balancing enterprise engineering with product creation.",
       skills: {
         backend: "Backend & Systems",
         frontend: "Frontend & UI/UX",
@@ -199,18 +200,18 @@ export const content = {
       ctaBuilds: "View Build Log",
       items: [
         {
-          title: "Mu Online Character Mgmt",
-          description: "Scalable character management platform for an MMORPG. Designed with Hexagonal Architecture for domain isolation. RESTful APIs and DDD entities.",
+          title: "Character Management System (MMORPG)",
+          description: "Scalable character management platform within an MMORPG ecosystem, designed with Hexagonal Architecture for domain isolation and future extensibility. Implemented REST APIs and domain-oriented entities to enable integration with game servers and administrative tools. Focused on maintainability, testability, and long-term scalability.",
           tech: ["Laravel", "React", "MySQL", "Hexagonal Arch"]
         },
         {
           title: "Campaign Admin Platform",
-          description: "Campaign administration system with complex business rule validation and dynamic reward configuration. Modular UI components for enterprise workflows.",
+          description: "Administrative system for campaign configuration with complex business rules and advanced data validation. Implemented uniqueness validations across multiple parameters and modular UI components for scalable enterprise workflows.",
           tech: ["Next.js", "React", "Laravel", "MySQL"]
         },
         {
-          title: "Business Hours System",
-          description: "Enterprise scheduling interface allowing CRUD operations for business hours grouped by weekday. API contracts and multi-tenant UI patterns.",
+          title: "Business Hours Management System",
+          description: "Enterprise interface for business hours CRUD grouped by day of week. Designed API contracts and UI patterns aiming for multi-tenant scalability.",
           tech: ["Next.js", "React", "REST API"]
         },
       ]
@@ -219,16 +220,16 @@ export const content = {
       title: "Indie Builds & Experiments",
       items: [
         {
-          title: "Therapist Practice Management SaaS (WIP)",
-          description: "Exploring a lightweight practice management platform for therapists, focusing on scheduling, notes, and privacy-first workflows."
+          title: "SaaS for Clinics & Therapists Management (WIP)",
+          description: "Exploring a lightweight platform for schedule management, medical records, and admin flows, focusing on privacy and simplicity."
         },
         {
           title: "AI Automation Agents",
-          description: "Building autonomous agents for game farming, admin automation, and productivity workflows."
+          description: "Building autonomous agents for administrative task automation, productivity, and technical workflows."
         },
         {
           title: "Architecture & Developer Tooling Experiments",
-          description: "Personal experiments in system design, infrastructure tooling, and developer productivity systems."
+          description: "Personal projects focused on system design, infrastructure, and engineering productivity."
         }
       ]
     },
@@ -261,6 +262,7 @@ export const content = {
     },
     footer: {
       rights: "Design & Code by Caique Mello. Built with Next.js, Tailwind & Vercel Style.",
+      slogan: "Build systems. Build products. Stay sovereign.",
     },
   },
 };

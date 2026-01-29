@@ -28,17 +28,19 @@ export function Hero({ content }: HeroProps) {
             <span>{content.badge}</span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground max-w-4xl mx-auto mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-foreground max-w-4xl mx-auto mb-6">
              {content.role}
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground/80 max-w-2xl mx-auto leading-relaxed">
             {content.description}
           </p>
 
-          <p className="text-base text-muted-foreground/60 max-w-xl mx-auto leading-relaxed pt-2">
+          <p className="text-lg text-muted-foreground/80 max-w-2xl mx-auto leading-relaxed">
             {content.extra}
           </p>
+
+
 
           <div className="flex items-center justify-center gap-4 pt-8 text-sm font-medium">
              <button 

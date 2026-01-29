@@ -15,7 +15,7 @@ interface ProjectsProps {
 export function Projects({ content }: ProjectsProps) {
   return (
     <section id="projects" className="py-32 bg-background relative border-b border-border/40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

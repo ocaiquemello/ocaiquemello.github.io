@@ -37,7 +37,7 @@ export function About({ content }: AboutProps) {
   
   return (
     <section id="about" className="py-24 bg-muted/20 border-b border-border/40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
