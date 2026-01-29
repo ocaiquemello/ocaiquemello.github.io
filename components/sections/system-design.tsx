@@ -1,13 +1,13 @@
 import { Content } from "@/lib/content";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Server, Database, Cloud, Layers } from "lucide-react";
+import { Server, Database, Cloud, Layers, Wrench, Zap } from "lucide-react";
 
 interface SystemDesignProps {
   content: Content["systemDesign"];
 }
 
 export function SystemDesign({ content }: SystemDesignProps) {
-  const icons = [Server, Layers, Cloud];
+  const icons = [Server, Layers, Database, Cloud, Wrench, Zap];
 
   return (
     <section id="system-design" className="py-24 bg-background border-b border-border/40">
@@ -17,7 +17,7 @@ export function SystemDesign({ content }: SystemDesignProps) {
           <p className="text-muted-foreground max-w-2xl text-lg">{content.description}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {content.items.map((item, index) => {
             const Icon = icons[index] || Database;
             return (
@@ -26,8 +26,8 @@ export function SystemDesign({ content }: SystemDesignProps) {
                   <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <CardTitle>{item.title}</CardTitle>
-                  <CardDescription className="text-base mt-2 leading-relaxed">
+                  <CardTitle className="text-lg">{item.title}</CardTitle>
+                  <CardDescription className="text-sm mt-2 leading-relaxed">
                     {item.description}
                   </CardDescription>
                 </CardHeader>

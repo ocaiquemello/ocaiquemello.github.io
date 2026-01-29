@@ -18,6 +18,7 @@ export function Navbar({ content }: NavbarProps) {
 
   const navItems = [
     { name: content.about, href: "#about" },
+    { name: content.builds, href: "/builds" },
     { name: content.projects, href: "#projects" },
     { name: content.contact, href: "#contact" },
   ];

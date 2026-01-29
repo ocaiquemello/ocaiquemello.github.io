@@ -28,31 +28,43 @@ export function Hero({ content }: HeroProps) {
             <span>{content.badge}</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground">
-            {content.greeting}
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground max-w-4xl mx-auto mb-6">
+             {content.role}
           </h1>
-          
-          <p className="text-2xl md:text-3xl text-muted-foreground font-light max-w-2xl mx-auto">
-             <span className="text-foreground font-medium">{content.role}</span>
-          </p>
 
-          <p className="text-lg text-muted-foreground/80 max-w-xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground/80 max-w-2xl mx-auto leading-relaxed">
             {content.description}
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button size="lg" className="rounded-full text-base" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
-              {content.cta} <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            
-            <div className="flex items-center gap-2">
-              <Button variant="ghost" size="icon" className="rounded-full" onClick={() => window.open('https://github.com/ocaiquemello', '_blank')}>
-                <Github className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="rounded-full" onClick={() => window.open('https://linkedin.com/in/ocaiquemello', '_blank')}>
-                <Linkedin className="h-5 w-5" />
-              </Button>
-            </div>
+          <p className="text-base text-muted-foreground/60 max-w-xl mx-auto leading-relaxed pt-2">
+            {content.extra}
+          </p>
+
+          <div className="flex items-center justify-center gap-4 pt-8 text-sm font-medium">
+             <button 
+               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+               className="hover:text-primary transition-colors hover:underline underline-offset-4"
+             >
+                [{content.cta}]
+             </button>
+             <span className="text-muted-foreground/40">·</span>
+             <a 
+               href="https://github.com/ocaiquemello" 
+               target="_blank" 
+               rel="noreferrer"
+               className="hover:text-primary transition-colors hover:underline underline-offset-4"
+             >
+                [{content.github}]
+             </a>
+             <span className="text-muted-foreground/40">·</span>
+             <a 
+               href="https://linkedin.com/in/caiquemello" 
+               target="_blank" 
+               rel="noreferrer"
+               className="hover:text-primary transition-colors hover:underline underline-offset-4"
+             >
+                [{content.linkedin}]
+             </a>
           </div>
         </motion.div>
       </div>

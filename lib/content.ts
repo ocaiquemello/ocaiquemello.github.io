@@ -3,20 +3,24 @@ export const content = {
     nav: {
       about: "Sobre",
       projects: "Projetos",
+      builds: "Builds",
       contact: "Contato",
     },
     hero: {
       greeting: "Caique Mello",
-      role: "Senior Product Engineer",
-      badge: "Senior Product Engineer",
-      description: "Engenheiro de software focado em produto. Construo sistemas escaláveis e experiências de alto nível para a web.",
+      role: "Senior Software Engineer construindo sistemas escaláveis e produtos independentes",
+      badge: "Senior Software Engineer",
+      description: "Projeto e construo sistemas web de alta performance, backends escaláveis e ferramentas para desenvolvedores utilizando Laravel, React, TypeScript e infraestrutura em nuvem.",
+      extra: "Atualmente explorando produtos SaaS independentes e sistemas de automação enquanto trabalho em plataformas corporativas.",
       cta: "Ver Projetos",
+      github: "GitHub",
+      linkedin: "LinkedIn",
     },
     about: {
-      title: "Mindset de Fundador",
-      p1: "Não escrevo apenas código; construo produtos. Minha abordagem combina engenharia pragmática com visão de negócio.",
-      p2: "Especialista em transformar requisitos complexos em sistemas simples, escaláveis e manuteníveis. Foco em arquitetura limpa (Clean/Hexagonal), performance e experiência do desenvolvedor.",
-      p3: "Crio soluções SaaS independentes como hobby, o que me dá uma perspectiva única sobre o ciclo completo de desenvolvimento de software.",
+      title: "Mindset de Engenheiro-Criador",
+      p1: "Sou um Engenheiro de Software Sênior focado na construção de sistemas escaláveis e produtos de longo prazo.",
+      p2: "Gosto de projetar arquitetura de software, melhorar a performance de sistemas e experimentar ideias de SaaS independentes.",
+      p3: "Meu objetivo é combinar a excelência da engenharia corporativa com a criação de produtos independentes, mantendo um ritmo calmo e sustentável enquanto construo software significativo.",
       skills: {
         backend: "Backend & Systems",
         frontend: "Frontend & UI/UX",
@@ -25,20 +29,32 @@ export const content = {
       },
     },
     systemDesign: {
-      title: "Arquitetura & Sistemas",
-      description: "Expertise em desenhar soluções robustas para problemas complexos.",
+      title: "Sistemas que Construo",
+      description: "Infraestrutura e arquitetura de nível corporativo.",
       items: [
         {
-          title: "Sistemas Distribuídos",
-          description: "Desenho de APIs RESTful e GraphQL escaláveis, otimização de banco de dados e microserviços."
+          title: "APIs REST Escaláveis",
+          description: "APIs RESTful e backends com Clean Architecture focados em manutenibilidade."
         },
         {
-          title: "Clean Architecture",
-          description: "Implementação de padrões como DDD e Hexagonal Architecture para garantir manutenibilidade."
+          title: "Plataformas SaaS",
+          description: "Dashboards multi-tenant e plataformas administrativas completas."
         },
         {
-          title: "DevOps & Cloud",
-          description: "CI/CD pipelines, Docker, AWS (EC2, S3, RDS) e Vercel para deploys automatizados e seguros."
+          title: "Banco de Dados",
+          description: "Sistemas de banco de dados relacional de alta performance e modelagem complexa."
+        },
+        {
+          title: "DevOps & CI/CD",
+          description: "Pipelines automatizados com Docker e integração contínua."
+        },
+        {
+          title: "Ferramentas Internas",
+          description: "Plataformas de automação e ferramentas para otimização de fluxo de trabalho."
+        },
+        {
+          title: "Arquiteturas Event-Driven",
+          description: "Sistemas robustos baseados em eventos e processamento em tempo real."
         }
       ]
     },
@@ -48,10 +64,45 @@ export const content = {
       shipping: "Lançando mensalmente",
       comingSoonTitle: "Projetos em Órbita",
       comingSoonDescription: "Estou reformulando esta seção para apresentar novos produtos e ferramentas. Fique ligado.",
+      ctaBuilds: "Ver Log de Builds",
+      items: [
+        {
+          title: "Mu Online Character Mgmt",
+          description: "Plataforma escalável para gestão de personagens em MMORPG. Design com Hexagonal Architecture para isolamento de domínio. APIs RESTful e entidades baseadas em DDD.",
+          tech: ["Laravel", "React", "MySQL", "Hexagonal Arch"]
+        },
+        {
+          title: "Campaign Admin Platform",
+          description: "Sistema de administração de campanhas com validação complexa de regras de negócio e configuração dinâmica de recompensas. Componentes de UI modulares.",
+          tech: ["Next.js", "React", "Laravel", "MySQL"]
+        },
+        {
+          title: "Business Hours System",
+          description: "Interface de agendamento corporativo permitindo operações CRUD para horários agrupados por dia da semana. Contratos de API e padrões de UI multi-tenant.",
+          tech: ["Next.js", "React", "REST API"]
+        },
+      ]
+    },
+    builds: {
+      title: "Construções Independentes & Experimentos",
+      items: [
+        {
+          title: "SaaS de Gestão para Terapeutas (WIP)",
+          description: "Explorando uma plataforma leve de gerenciamento para terapeutas, focando em agendamento, anotações e privacidade."
+        },
+        {
+          title: "Agentes de Automação com IA",
+          description: "Construindo agentes autônomos para 'game farming', automação administrativa e fluxos de produtividade."
+        },
+        {
+          title: "Experimentos de Arquitetura & Tooling",
+          description: "Experimentos pessoais em design de sistemas, ferramentas de infraestrutura e produtividade do desenvolvedor."
+        }
+      ]
     },
     projects: {
-      title: "Aplicações",
-      subtitle: "Aplicações de alto impacto construídas com arquitetura moderna.",
+      title: "Projetos em Destaque",
+      subtitle: "Soluções complexas desenvolvidas com rigor técnico.",
       viewGithub: "Ver no Github",
       items: [
         {
@@ -83,21 +134,25 @@ export const content = {
   en: {
     nav: {
       about: "About",
-      projects: "Experience",
+      projects: "Projects",
+      builds: "Builds",
       contact: "Contact",
     },
     hero: {
       greeting: "Caique Mello",
-      role: "Senior Product Engineer",
-      badge: "Senior Product Engineer",
-      description: "Product-minded engineer building high-quality web applications. I turn complex problems into simple, scalable, and beautiful software.",
-      cta: "View Experience",
+      role: "Senior Software Engineer building scalable systems and independent products",
+      badge: "Senior Software Engineer",
+      description: "I design and build high-performance web systems, scalable backends, and developer-focused tools using Laravel, React, TypeScript, and cloud infrastructure.",
+      extra: "Currently exploring independent SaaS products and automation systems while working on enterprise-grade platforms.",
+      cta: "View Projects",
+      github: "GitHub",
+      linkedin: "LinkedIn",
     },
     about: {
-      title: "The Founder Mindset",
-      p1: "I don't just write code; I ship products. My approach blends pragmatic engineering with a strong product vision.",
-      p2: "Specialized in transforming undefined requirements into scalable systems. I prioritize clean architecture (Hexagonal/DDD), developer experience, and long-term maintainability.",
-      p3: "I build indie SaaS projects in my spare time, giving me deep empathy for the full software lifecycle—from first commit to first customer.",
+      title: "Engineer-Creator Mindset",
+      p1: "I am a Senior Software Engineer focused on building scalable systems and long-term products.",
+      p2: "I enjoy designing software architecture, improving system performance, and experimenting with independent SaaS ideas.",
+      p3: "My goal is to combine enterprise engineering excellence with independent product creation, maintaining a calm and sustainable pace while building meaningful software.",
       skills: {
         backend: "Backend & Systems",
         frontend: "Frontend & UI/UX",
@@ -106,33 +161,80 @@ export const content = {
       },
     },
     systemDesign: {
-      title: "System Design & Architecture",
-      description: "Designing robust solutions for complex engineering challenges.",
+      title: "Systems I Build",
+      description: "Enterprise-grade infrastructure and architecture.",
       items: [
         {
-          title: "Distributed Systems",
-          description: "Designing scalable RESTful/GraphQL APIs, database optimization, and resilient microservices patterns."
+          title: "Scalable REST APIs",
+          description: "Clean Architecture backends and high-performance APIs."
         },
         {
-          title: "Clean Architecture",
-          description: "Applying Domain-Driven Design (DDD) and Hexagonal Architecture to ensure code longevity."
+          title: "SaaS Platforms",
+          description: "Multi-tenant dashboards and comprehensive admin platforms."
         },
         {
-          title: "DevOps & Cloud",
-          description: "Tech lead standard CI/CD pipelines, Docker containerization, and AWS infrastructure management."
+          title: "Relational Databases",
+          description: "High-performance database systems and complex data modeling."
+        },
+        {
+          title: "DevOps Pipelines",
+          description: "Docker, CI/CD automation, and cloud infrastructure management."
+        },
+        {
+          title: "Enterprise Tools",
+          description: "Internal automation platforms and workflow optimization tools."
+        },
+        {
+          title: "Event-Driven Systems",
+          description: "Real-time architectures and robust event processing systems."
         }
       ]
     },
     indieSaas: {
-      title: "Indie SaaS & Ventures",
-      description: "Side projects where I wear every hat: Engineer, Designer, and Founder.",
+      title: "Indie SaaS & Experiments",
+      description: "My playground for product ownership and engineering experiments.",
       shipping: "Shipping monthly",
       comingSoonTitle: "Projects in Orbit",
       comingSoonDescription: "I am currently reformulating this section to showcase new tools and products. Stay tuned.",
+      ctaBuilds: "View Build Log",
+      items: [
+        {
+          title: "Mu Online Character Mgmt",
+          description: "Scalable character management platform for an MMORPG. Designed with Hexagonal Architecture for domain isolation. RESTful APIs and DDD entities.",
+          tech: ["Laravel", "React", "MySQL", "Hexagonal Arch"]
+        },
+        {
+          title: "Campaign Admin Platform",
+          description: "Campaign administration system with complex business rule validation and dynamic reward configuration. Modular UI components for enterprise workflows.",
+          tech: ["Next.js", "React", "Laravel", "MySQL"]
+        },
+        {
+          title: "Business Hours System",
+          description: "Enterprise scheduling interface allowing CRUD operations for business hours grouped by weekday. API contracts and multi-tenant UI patterns.",
+          tech: ["Next.js", "React", "REST API"]
+        },
+      ]
+    },
+    builds: {
+      title: "Indie Builds & Experiments",
+      items: [
+        {
+          title: "Therapist Practice Management SaaS (WIP)",
+          description: "Exploring a lightweight practice management platform for therapists, focusing on scheduling, notes, and privacy-first workflows."
+        },
+        {
+          title: "AI Automation Agents",
+          description: "Building autonomous agents for game farming, admin automation, and productivity workflows."
+        },
+        {
+          title: "Architecture & Developer Tooling Experiments",
+          description: "Personal experiments in system design, infrastructure tooling, and developer productivity systems."
+        }
+      ]
     },
     projects: {
-      title: "Selected Experience",
-      subtitle: "High-impact applications built with modern architecture.",
+      title: "Featured Projects",
+      subtitle: "Complex solutions built with technical rigor.",
       viewGithub: "View Github",
       items: [
         {
@@ -153,9 +255,9 @@ export const content = {
       ],
     },
     contact: {
-      title: "Available for new challenges",
-      description: "I am looking for roles where I can leverage my product engineering expertise to have significant business impact.",
-      ctaEmail: "caiquemello.dev@gmail.com",
+      title: "Let's build something together?",
+      description: "I am available for challenging projects that require high technical seniority and product vision.",
+      ctaEmail: "ocaiquemello@gmail.com",
     },
     footer: {
       rights: "Design & Code by Caique Mello. Built with Next.js, Tailwind & Vercel Style.",
